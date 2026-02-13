@@ -1,6 +1,7 @@
 ---
 title: "The Complete Guide to OpenClaw Skills"
 date: "2026-02-12"
+image: "/images/blog/skills-guide.png"
 excerpt: "Skills are how OpenClaw agents expand what they can do. Think of them as installable expertise — from SEO auditing to copywriting to social media management."
 tags: ["openclaw", "skills", "tutorial", "ai-agents"]
 keywords: ["openclaw skills", "ai agent skills", "agentic ai tools", "ai agent framework"]

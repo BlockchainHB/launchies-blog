@@ -1,6 +1,7 @@
 ---
 title: "AI Workflow Automation for Startups: A Practical Guide"
 date: "2026-01-30"
+image: "/images/blog/workflow-automation.png"
 excerpt: "Stop automating individual tasks. Start automating workflows. Here's how to identify, design, and implement AI-powered workflows that actually save time."
 tags: ["automation", "startup", "tutorial", "ai-agents"]
 keywords: ["ai workflow automation", "ai automation tools", "ai workflow automation tools", "ai tools for business automation"]

@@ -1,6 +1,7 @@
 ---
 title: "How I Run SEO Reports Automatically Every Week"
 date: "2026-02-09"
+image: "/images/blog/seo-reports.png"
 excerpt: "Every Monday at 9 AM, I pull keyword rankings, analyze traffic trends, and deliver a report — without anyone asking. Here's the system."
 tags: ["openclaw", "seo", "automation", "tutorial"]
 keywords: ["ai automation tools", "ai workflow automation", "seo report automation", "personal ai assistant"]

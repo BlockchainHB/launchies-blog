@@ -15,6 +15,7 @@ export interface Post {
   tags: string[];
   readingTime: number;
   keywords: string[];
+  image: string | null;
 }
 
 function calculateReadingTime(content: string): number {
@@ -42,6 +43,7 @@ export function getAllPosts(): Post[] {
         tags: data.tags || [],
         readingTime: data.readingTime || calculateReadingTime(content),
         keywords: data.keywords || [],
+        image: data.image || null,
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -63,6 +65,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     tags: data.tags || [],
     readingTime: data.readingTime || calculateReadingTime(content),
     keywords: data.keywords || [],
+    image: data.image || null,
   };
 }
 

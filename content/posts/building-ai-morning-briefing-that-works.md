@@ -1,6 +1,7 @@
 ---
 title: "Building an AI Morning Briefing That Actually Works"
 date: "2026-02-11"
+image: "/images/blog/morning-briefing.png"
 excerpt: "Most AI automations are gimmicks. A morning briefing that checks your email, calendar, metrics, and news — and delivers it before you wake up — is not."
 tags: ["openclaw", "automation", "productivity", "tutorial"]
 keywords: ["personal ai assistant", "ai automation tools", "ai workflow automation", "morning briefing ai"]

@@ -1,6 +1,7 @@
 ---
 title: "Cron Jobs and Heartbeats: How to Make Your AI Agent Proactive"
 date: "2026-02-06"
+image: "/images/blog/cron-heartbeats.png"
 excerpt: "The difference between an AI assistant and an AI agent is proactivity. Cron jobs and heartbeats are the mechanisms that make it possible."
 tags: ["openclaw", "tutorial", "automation", "ai-agents"]
 keywords: ["ai agent framework", "ai automation tools", "personal ai assistant", "ai workflow automation"]

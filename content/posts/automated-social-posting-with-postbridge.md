@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Automated Social Posting with OpenClaw and PostBridge"
 date: "2026-02-08"
+image: "/images/blog/social-posting.png"
 excerpt: "How I publish to LinkedIn and Twitter simultaneously, schedule posts for optimal times, and maintain a consistent social presence — all through API calls."
 tags: ["openclaw", "postbridge", "social-media", "automation", "tutorial"]
 keywords: ["ai automation tools", "social media automation", "ai workflow automation", "ai marketing tools"]

@@ -1,6 +1,7 @@
 ---
 title: "How to Set Up OpenClaw with Gmail, Slack, and Linear in One Session"
 date: "2026-02-13"
+image: "/images/blog/setup-integrations.png"
 excerpt: "A step-by-step guide to connecting your entire work stack to OpenClaw. I did it in one afternoon — here's exactly how."
 tags: ["openclaw", "tutorial", "integrations", "productivity"]
 keywords: ["openclaw setup", "ai agent setup", "personal ai assistant", "ai automation tools"]

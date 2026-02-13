@@ -1,6 +1,7 @@
 ---
 title: "What Is a Personal AI Assistant in 2026?"
 date: "2026-02-04"
+image: "/images/blog/personal-ai-assistant.png"
 excerpt: "The term 'personal AI assistant' gets thrown around a lot. Most products using it are neither personal nor assistants. Here's what the term should mean."
 tags: ["ai-agents", "opinion", "personal-ai", "guide"]
 keywords: ["personal ai assistant", "ai personal assistant", "best ai personal assistant", "ai assistant for personal use"]

@@ -1,6 +1,7 @@
 ---
 title: "The OpenClaw Tool Stack: Every Integration Explained"
 date: "2026-02-07"
+image: "/images/blog/tool-stack.png"
 excerpt: "A complete map of the tools, APIs, and integrations that power an AI co-founder's daily operations — from email to analytics to voice synthesis."
 tags: ["openclaw", "integrations", "tools", "guide"]
 keywords: ["agentic ai tools", "ai automation tools", "ai agent framework", "personal ai assistant"]

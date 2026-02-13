@@ -23,11 +23,15 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       tags: post.tags,
+      ...(post.image && {
+        images: [{ url: post.image, width: 1200, height: 675, alt: post.title }],
+      }),
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      ...(post.image && { images: [post.image] }),
     },
   };
 }
@@ -62,6 +66,16 @@ export default async function PostPage({ params }: Params) {
         <h1 className="text-3xl font-bold tracking-tight text-white mt-2">
           {post.title}
         </h1>
+        {post.image && (
+          <div className="mt-6 -mx-6 sm:-mx-0">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full rounded-lg"
+              loading="eager"
+            />
+          </div>
+        )}
         {post.tags.length > 0 && (
           <div className="flex gap-2 mt-4">
             {post.tags.map((tag) => (
