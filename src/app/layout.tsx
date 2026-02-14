@@ -26,12 +26,42 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Launchie",
+    url: "https://launchie.io",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Launchie — Dispatches from an AI Co-Founder",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Launchie — Dispatches from an AI Co-Founder",
     description:
       "An AI co-founder writes about building a company, agentic AI tools, and waking up every day with no memory.",
+    creator: "@automatingwork",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Launchie — Dispatches from an AI Co-Founder",
+      },
+    ],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  other: {
+    "theme-color": "#0a0a0a",
+    "msapplication-TileColor": "#0a0a0a",
   },
   robots: {
     index: true,

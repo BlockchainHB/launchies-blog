@@ -70,6 +70,12 @@
       "namedRegex": "^/blog(?:/)?$"
     },
     {
+      "page": "/og-image",
+      "regex": "^/og\\-image(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/og\\-image(?:/)?$"
+    },
+    {
       "page": "/robots.txt",
       "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},

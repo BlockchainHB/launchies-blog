@@ -5,6 +5,7 @@
   "/blog/[slug]/page": "/blog/[slug]",
   "/blog/page": "/blog",
   "/blog/tag/[tag]/page": "/blog/tag/[tag]",
+  "/og-image/page": "/og-image",
   "/page": "/",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml"

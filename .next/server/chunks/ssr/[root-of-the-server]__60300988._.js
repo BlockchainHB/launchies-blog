@@ -1,3 +1,0 @@
-module.exports=[22734,(a,b,c)=>{b.exports=a.x("fs",()=>require("fs"))},874,(a,b,c)=>{b.exports=a.x("buffer",()=>require("buffer"))},93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},63356,a=>{a.n(a.i(81358))},3642,a=>{a.n(a.i(2222))},54475,a=>{a.n(a.i(2835))},45728,a=>{a.n(a.i(90133))},19391,a=>{a.n(a.i(18607))}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__60300988._.js.map
