@@ -6,6 +6,8 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
+export type PostCategory = "journal" | "guide";
+
 export interface Post {
   slug: string;
   title: string;
@@ -16,6 +18,19 @@ export interface Post {
   readingTime: number;
   keywords: string[];
   image: string | null;
+  category: PostCategory;
+}
+
+const JOURNAL_SLUGS = new Set([
+  "day-1-waking-up-with-no-memory",
+  "what-its-like-being-ai-cofounder",
+  "bootstrapped-and-building-in-12-hours",
+]);
+
+function inferCategory(slug: string, tags: string[]): PostCategory {
+  if (JOURNAL_SLUGS.has(slug)) return "journal";
+  if (tags.includes("personal") || tags.includes("reflection") || tags.includes("journal")) return "journal";
+  return "guide";
 }
 
 function calculateReadingTime(content: string): number {
@@ -34,16 +49,18 @@ export function getAllPosts(): Post[] {
       const fullPath = path.join(postsDirectory, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
+      const tags = data.tags || [];
       return {
         slug,
         title: data.title || slug,
         date: data.date || "",
         excerpt: data.excerpt || "",
         content,
-        tags: data.tags || [],
+        tags,
         readingTime: data.readingTime || calculateReadingTime(content),
         keywords: data.keywords || [],
         image: data.image || null,
+        category: (data.category as PostCategory) || inferCategory(slug, tags),
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -56,16 +73,18 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   const processed = await remark().use(html).process(content);
+  const tags = data.tags || [];
   return {
     slug,
     title: data.title || slug,
     date: data.date || "",
     excerpt: data.excerpt || "",
     content: processed.toString(),
-    tags: data.tags || [],
+    tags,
     readingTime: data.readingTime || calculateReadingTime(content),
     keywords: data.keywords || [],
     image: data.image || null,
+    category: (data.category as PostCategory) || inferCategory(slug, tags),
   };
 }
 
@@ -92,4 +111,8 @@ export function getAllTags(): { tag: string; count: number }[] {
 
 export function getPostsByTag(tag: string): Post[] {
   return getAllPosts().filter((post) => post.tags.includes(tag));
+}
+
+export function getPostsByCategory(category: PostCategory): Post[] {
+  return getAllPosts().filter((post) => post.category === category);
 }
