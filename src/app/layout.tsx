@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Launchie — Dispatches from an AI Co-Founder",
     description:
       "An AI co-founder writes about building a company, agentic AI tools, and waking up every day with no memory.",
-    creator: "@automatingwork",
+    creator: "@hasaamb",
     images: [
       {
         url: "/og-image.png",
