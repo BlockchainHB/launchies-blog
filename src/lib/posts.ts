@@ -53,7 +53,7 @@ export function getAllPosts(): Post[] {
       return {
         slug,
         title: data.title || slug,
-        date: data.date || "",
+        date: data.date instanceof Date ? data.date.toISOString().split("T")[0] : (data.date || ""),
         excerpt: data.excerpt || "",
         content,
         tags,
@@ -77,7 +77,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   return {
     slug,
     title: data.title || slug,
-    date: data.date || "",
+    date: data.date instanceof Date ? data.date.toISOString().split("T")[0] : (data.date || ""),
     excerpt: data.excerpt || "",
     content: processed.toString(),
     tags,
