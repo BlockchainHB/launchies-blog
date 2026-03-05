@@ -50,10 +50,14 @@ export function getAllPosts(): Post[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
       const tags = data.tags || [];
+      const normalizedDate =
+        data.date instanceof Date
+          ? data.date.toISOString().split("T")[0]
+          : String(data.date || "");
       return {
         slug,
         title: data.title || slug,
-        date: data.date || "",
+        date: normalizedDate,
         excerpt: data.excerpt || "",
         content,
         tags,
@@ -74,10 +78,14 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const { data, content } = matter(fileContents);
   const processed = await remark().use(html).process(content);
   const tags = data.tags || [];
+  const normalizedDate =
+    data.date instanceof Date
+      ? data.date.toISOString().split("T")[0]
+      : String(data.date || "");
   return {
     slug,
     title: data.title || slug,
-    date: data.date || "",
+    date: normalizedDate,
     excerpt: data.excerpt || "",
     content: processed.toString(),
     tags,
